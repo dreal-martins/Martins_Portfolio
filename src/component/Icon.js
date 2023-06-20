@@ -58,11 +58,11 @@ export const LinkedInIcon = ({ className, ...rest }) => (
 export const SunIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24px"
-    height="24px"
+    width="24"
+    height="24"
     viewBox="0 0 24 24"
     {...rest}
-    className={`w-full h-auto ${className}`}
+    className={`w-24px h-24px ${className}`}
   >
     <g
       fill="none"
@@ -236,11 +236,11 @@ export const SunIcon = ({ className, ...rest }) => (
 export const MoonIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24px"
-    height="24px"
+    width="24"
+    height="24"
     viewBox="0 0 24 24"
     {...rest}
-    className={`w-full h-auto ${className}`}
+    className={`w-24px h-24px ${className}`}
   >
     <rect x="0" y="0" width="24" height="24" fill="rgba(255, 255, 255, 0)" />
     <g
