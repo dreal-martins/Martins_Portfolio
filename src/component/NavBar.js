@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import {
   GithubIcon,
   LinkedInIcon,
@@ -60,35 +60,51 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 
 const NavBar = () => {
   const [mode, setMode] = useThemeSwicher();
-  const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const modalRef = useRef(null);
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        setIsModalOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleToggleModal = () => {
+    setIsModalOpen(!isModalOpen);
   };
 
   return (
     <header className="w-full px-32 py-8 font-medium flex item-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
       <button
         className=" flex-col justify-center items-center hidden lg:flex"
-        onClick={handleClick}
+        onClick={handleToggleModal}
       >
         <span
           className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm  ${
-            isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
+            isModalOpen ? "rotate-45 translate-y-2.5" : "-translate-y-0.5"
           }`}
         ></span>
         <span
           className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm my-0.5 ${
-            isOpen ? "opacity-0" : "opacity-100"
+            isModalOpen ? "opacity-0" : "opacity-100"
           }`}
         ></span>
         <span
           className={`bg-dark dark:bg-light block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm translate-y-0.5 ${
-            isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
+            isModalOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
           }`}
         ></span>
       </button>
 
+      {/* Desktop Nav */}
       <div className="w-full flex justify-between items-center lg:hidden">
         <nav>
           <CustomLink href="/" title="Home" className="mr-4" />
@@ -103,14 +119,14 @@ const NavBar = () => {
             target={"_blank"}
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            className="w-6 mx-3"
+            className="w-8 mx-3"
           >
             <GithubIcon />
           </motion.a>
           <motion.a
             href="https://ng.linkedin.com/in/martins-aguegbodo-45446124b"
             target={"_blank"}
-            className="w-6 mx-3"
+            className="w-8 mx-3"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -119,7 +135,7 @@ const NavBar = () => {
           <motion.a
             href="https://twitter.com/dreal_martins"
             target={"_blank"}
-            className="w-6 mx-3"
+            className="w-8 mx-3"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -128,67 +144,83 @@ const NavBar = () => {
           <motion.a
             href="https://wa.me/2348080356793?text=+my+name+is+______'"
             target={"_blank"}
-            className="w-6 mx-3"
+            className="w-8 mx-3"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Image src={Whatsapp} alt="Whatsapp" />
+            <Image
+              src={Whatsapp}
+              alt="Whatsapp"
+              priority
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
+            />
           </motion.a>
           <motion.a
             href="https://www.instagram.com/dreal.martins/"
             target={"_blank"}
-            className="w-6 ml-3 p-0"
+            className="w-9"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
           >
-            <Image src={Instagram} alt="Instagram" />
+            <Image
+              src={Instagram}
+              alt="Instagram"
+              priority
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              50vw"
+            />
           </motion.a>
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+            className={`ml-5 flex items-center justify-center rounded-full p-1 ${
               mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
             }`}
           >
             {mode === "dark" ? (
-              <MoonIcon className={"fill-dark"} />
+              <MoonIcon className={"fill-dark w-6 h-7"} />
             ) : (
-              <SunIcon className={"fill-dark"} />
+              <SunIcon className={"fill-dark w-6 h-7"} />
             )}
           </button>
         </nav>
       </div>
 
-      {isOpen ? (
+      {/* Mobile Nav */}
+      {isModalOpen && (
         <motion.div
+          ref={modalRef}
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[70vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-32"
+          className="min-w-[90vw] flex flex-col justify-between z-30 items-center fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-dark/90 dark:bg-light/75 rounded-lg backdrop-blur-md py-28 px-5"
         >
           <nav className="flex items-center flex-col justify-center">
             <CustomMobileLink
               href="/"
               title="Home"
               className=""
-              toggle={handleClick}
+              toggle={handleToggleModal}
             />
             <CustomMobileLink
               href="/about"
               title="About"
               className=""
-              toggle={handleClick}
+              toggle={handleToggleModal}
             />
             <CustomMobileLink
               href="/projects"
               title="Projects"
               className=""
-              toggle={handleClick}
+              toggle={handleToggleModal}
             />
             <CustomMobileLink
               href="/articles"
               title="Articles"
               className=""
-              toggle={handleClick}
+              toggle={handleToggleModal}
             />
           </nav>
 
@@ -198,14 +230,14 @@ const NavBar = () => {
               target={"_blank"}
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              className="w-8 mr-3 sm:mx-1  bg-light rounded-full dark:bg-dark"
+              className="w-9 mr-3 sm:mx-1  bg-light rounded-full dark:bg-dark"
             >
               <GithubIcon />
             </motion.a>
             <motion.a
               href="https://ng.linkedin.com/in/martins-aguegbodo-45446124b"
               target={"_blank"}
-              className="w-8 mx-3 sm:mx-1 "
+              className="w-9 mx-3 sm:mx-1 "
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -214,7 +246,7 @@ const NavBar = () => {
             <motion.a
               href="https://twitter.com/dreal_martins"
               target={"_blank"}
-              className="w-8 mx-3 sm:mx-1 "
+              className="w-9 mx-3 sm:mx-1 "
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -223,7 +255,7 @@ const NavBar = () => {
             <motion.a
               href="https://wa.me/2348080356793?text=+my+name+is+______'"
               target={"_blank"}
-              className="w-8 mx-3 sm:mx-1 "
+              className="w-9 mx-3 sm:mx-1 "
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -232,7 +264,7 @@ const NavBar = () => {
             <motion.a
               href="https://www.instagram.com/dreal.martins/"
               target={"_blank"}
-              className="w-8 ml-3 sm:mx-1"
+              className="w-9 ml-3 sm:mx-1"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
             >
@@ -241,20 +273,19 @@ const NavBar = () => {
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`ml-3 flex items-center justify-center rounded-full p-1 ${
+              className={`ml-3 flex items-center justify-center rounded-full p-1  ${
                 mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
               }`}
             >
               {mode === "dark" ? (
-                <MoonIcon className={"fill-dark"} />
+                <MoonIcon className={"fill-dark h-7"} />
               ) : (
-                <SunIcon className={"fill-dark"} />
+                <SunIcon className={"fill-dark h-7 "} />
               )}
             </button>
           </nav>
         </motion.div>
-      ) : null}
-
+      )}
       <div className="absolute left-[50%] top-2 translate-x-[-50%]">
         <Logo />
       </div>

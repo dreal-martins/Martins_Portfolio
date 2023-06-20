@@ -28,17 +28,17 @@ const Skills = () => {
         >
           Web
         </motion.div>
-
         <Skill name="HTML" x="-25vw" y="2vw" />
         <Skill name="CSS" x="-5vw" y="-10vw" />
         <Skill name="Javascript" x="20vw" y="6vw" />
         <Skill name="ReactJS" x="0vw" y="12vw" />
         <Skill name="NextJS" x="-20vw" y="-15vw" />
         <Skill name="Redux" x="32vw" y="-5vw" />
-        <Skill name="MUI" x="15vw" y="-12vw" />
+        <Skill name="React Native" x="15vw" y="-12vw" />
         <Skill name="MUI" x="0vw" y="-20vw" />
         <Skill name="Firebase" x="-25vw" y="18vw" />
         <Skill name="Tailwind CSS" x="18vw" y="18vw" />
+        <Skill name="Context API" x="0vw" y="24vw" />
       </div>
     </>
   );

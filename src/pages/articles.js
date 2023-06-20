@@ -28,7 +28,6 @@ const MovingImg = ({ title, img, link }) => {
     x.set(0);
     y.set(0);
   }
-
   return (
     <Link
       href={link}
@@ -111,7 +110,6 @@ const articles = () => {
         <meta name="description" content="any description" />
       </Head>
       <TransitionEffect />
-
       <main className="w-full mb-16 flex flex-col items-center justify-center overflow-hidden dark:text-light">
         <Layout className="pt-16">
           <AnimatedText
@@ -143,7 +141,7 @@ const articles = () => {
           </h2>
           <ul>
             <Article
-              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
+              title="Best Visual Studio Code extensions I use on daily basis for my JavaScript, Node...."
               img={article3}
               date="April 18, 2023"
               link="/"
@@ -151,6 +149,18 @@ const articles = () => {
             <Article
               title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
               img={article4}
+              date="April 18, 2023"
+              link="/"
+            />
+            <Article
+              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
+              img={article5}
+              date="April 18, 2023"
+              link="/"
+            />
+            <Article
+              title="Form Validation In Reactjs: Build A Reusable Custom Hook For Inputs And Error Handling"
+              img={article5}
               date="April 18, 2023"
               link="/"
             />
