@@ -55,12 +55,12 @@ const Experience = () => {
           <Details
             position="Front-end developer"
             company="All Round Care (A.R.C)"
-            time="2022-Present"
+            time="late 2022 - Present"
             address="Lagos, NG"
             work="Worked on a team responsible for developing new features for A.R.C's
-            e-commerce web-app, including improving the accuracy and relevance of the admin dashboard and 
+            e-commerce web-app, company landing page, including improving the accuracy and relevance of the admin dashboard and 
             developing new tools for data analysis and visualization."
-            companyLink="#"
+            companyLink="https://allroundcare.net/"
           />
 
           <Details
@@ -69,13 +69,13 @@ const Experience = () => {
             time="Summer 2022"
             address="Lagos, NG."
             work="Assisted in teaching a course on computer programming, held office hours to help students with assignments, 
-            and graded exams and assignments."
+            and assist the senior."
             companyLink="#"
           />
           <Details
-            position="Web Developer (Freelancer.)"
-            company="Self-empolyed"
-            time="Fall 2021"
+            position="Web and App Developer (Freelancer)"
+            company="Upwork and Fiverr"
+            time="early 2022 - till now"
             address="Lagos, NG."
             work="Worked on people and clients projects, including implementing a new user interface for their Web-app and optimizing the performance of a core Web-apps component."
             companyLink="#"

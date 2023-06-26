@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Layout from "@/component/Layout";
 import Image from "next/image";
 import profilePic from "../../public/images/profile/developer-pic-1.png";
