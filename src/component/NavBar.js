@@ -61,11 +61,17 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 const NavBar = () => {
   const [mode, setMode] = useThemeSwicher();
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const buttonRef = useRef(null);
   const modalRef = useRef(null);
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (modalRef.current && !modalRef.current.contains(event.target)) {
+      if (
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target) &&
+        modalRef.current &&
+        !modalRef.current.contains(event.target)
+      ) {
         setIsModalOpen(false);
       }
     };
@@ -78,12 +84,13 @@ const NavBar = () => {
   }, []);
 
   const handleToggleModal = () => {
-    setIsModalOpen(!isModalOpen);
+    setIsModalOpen((isModalOpen) => !isModalOpen);
   };
 
   return (
     <header className="w-full px-32 py-8 font-medium flex item-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
       <button
+        ref={buttonRef}
         className=" flex-col justify-center items-center hidden lg:flex"
         onClick={handleToggleModal}
       >

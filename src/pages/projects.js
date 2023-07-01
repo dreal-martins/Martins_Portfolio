@@ -37,17 +37,14 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
         />
       </Link>
       <div className="w-1/2 flex flex-col items-start justify-between pl-6 lg:w-full lg:pl-0 lg:pt-6">
-        <span className="text-primary font-medium dark:text-primaryDark text-xl xs:text-base ">
-          {type}
-        </span>
         <Link
           href={link}
           target="_blank"
           className="hover:underline underline-offset-2"
         >
-          <h2 className="my-2 w-full text-left text-3xl font-bold dark:text-light sm:text-sm">
+          <h1 className="my-2 w-full text-left text-3xl font-bold dark:text-light sm:text-xl">
             {title}
-          </h2>
+          </h1>
         </Link>
         <p className="my-2 font-medium text-dark dark:text-light sm:text-sm">
           {summary}
@@ -148,51 +145,12 @@ const projects = () => {
               <FeaturedProject
                 title="GOLDS-GYM"
                 summary="This is a web-based gym website built with ReactJS and styled with MU. Experience a user-friendly gym website built with ReactJS and styled with MUI. Achieve your fitness goals with our expert trainers, top-notch facilities, and personalized workout plans. Join us today and make fitness a lifestyle!."
-                link="martinsgoldsgym.vercel.app"
+                link="https://martinsgoldsgym.vercel.app/"
                 type="Project"
                 img={project3}
                 github="https://github.com/dreal-martins/golds_gym"
               />
             </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                title="GOLDS-GYM"
-                summary="This is a web-based gym website built with ReactJS and styled with MU. Experience a user-friendly gym website built with ReactJS and styled with MUI. Achieve your fitness goals with our expert trainers, top-notch facilities, and personalized workout plans. Join us today and make fitness a lifestyle!."
-                link="martinsgoldsgym.vercel.app"
-                type="Project"
-                img={project3}
-                github="https://github.com/dreal-martins/golds_gym"
-              />
-            </div>
-            <div className="col-span-12">
-              <FeaturedProject
-                title="GOLDS-GYM"
-                summary="This is a web-based gym website built with ReactJS and styled with MU. Experience a user-friendly gym website built with ReactJS and styled with MUI. Achieve your fitness goals with our expert trainers, top-notch facilities, and personalized workout plans. Join us today and make fitness a lifestyle!."
-                link="martinsgoldsgym.vercel.app"
-                type="Project"
-                img={project3}
-                github="https://github.com/dreal-martins/golds_gym"
-              />
-            </div>
-
-            {/* <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
-                link="/"
-                type="Project"
-                img={project1}
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
-                link="/"
-                type="Project"
-                img={project1}
-                github="/"
-              />
-            </div> */}
           </div>
         </Layout>
       </main>
