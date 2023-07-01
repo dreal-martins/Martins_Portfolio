@@ -7,6 +7,9 @@ import Link from "next/link";
 import React from "react";
 import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
 import project2 from "../../public/images/projects/hulu-clone.png";
+import project3 from "../../public/images/projects/exercise.png";
+import project4 from "../../public/images/projects/tictactoe.png";
+import project5 from "../../public/images/projects/dreal-house.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/component/TransitionEffect";
 
@@ -135,45 +138,48 @@ const projects = () => {
                 title="Hulu Clone Project"
                 summary="Experience a high-performance web application powered by Next.js and styled with Tailwind CSS. Enjoy fast page loads, seamless navigation, and visually stunning designs for an exceptional user experience across devices."
                 link="https://martins-hulu-clone.vercel.app/"
-                type="Feature Project"
+                type="Project"
                 img={project2}
                 github="https://github.com/dreal-martins/hulu-clone"
               />
             </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
-                link="/"
-                type="Feature Project"
-                img={project1}
-                github="/"
-              />
-            </div>
-            <div className="col-span-6 sm:col-span-12">
-              <Project
-                title="Crypto Screener Application"
-                link="/"
-                type="Feature Project"
-                img={project1}
-                github="/"
+
+            <div className="col-span-12">
+              <FeaturedProject
+                title="GOLDS-GYM"
+                summary="This is a web-based gym website built with ReactJS and styled with MU. Experience a user-friendly gym website built with ReactJS and styled with MUI. Achieve your fitness goals with our expert trainers, top-notch facilities, and personalized workout plans. Join us today and make fitness a lifestyle!."
+                link="martinsgoldsgym.vercel.app"
+                type="Project"
+                img={project3}
+                github="https://github.com/dreal-martins/golds_gym"
               />
             </div>
             <div className="col-span-12">
               <FeaturedProject
-                title="Crypto Screener Application"
-                summary="A feature-rich Crypto Screener App using React, Tailwind CSS, Context API, React Router and Recharts. It shows detail regarding almost all the cryptocurrency. You can easily convert the price in your local currency."
-                link="/"
-                type="Feature Project"
-                img={project1}
-                github="/"
+                title="GOLDS-GYM"
+                summary="This is a web-based gym website built with ReactJS and styled with MU. Experience a user-friendly gym website built with ReactJS and styled with MUI. Achieve your fitness goals with our expert trainers, top-notch facilities, and personalized workout plans. Join us today and make fitness a lifestyle!."
+                link="martinsgoldsgym.vercel.app"
+                type="Project"
+                img={project3}
+                github="https://github.com/dreal-martins/golds_gym"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="GOLDS-GYM"
+                summary="This is a web-based gym website built with ReactJS and styled with MU. Experience a user-friendly gym website built with ReactJS and styled with MUI. Achieve your fitness goals with our expert trainers, top-notch facilities, and personalized workout plans. Join us today and make fitness a lifestyle!."
+                link="martinsgoldsgym.vercel.app"
+                type="Project"
+                img={project3}
+                github="https://github.com/dreal-martins/golds_gym"
               />
             </div>
 
-            <div className="col-span-6 sm:col-span-12">
+            {/* <div className="col-span-6 sm:col-span-12">
               <Project
                 title="Crypto Screener Application"
                 link="/"
-                type="Feature Project"
+                type="Project"
                 img={project1}
                 github="/"
               />
@@ -182,11 +188,11 @@ const projects = () => {
               <Project
                 title="Crypto Screener Application"
                 link="/"
-                type="Feature Project"
+                type="Project"
                 img={project1}
                 github="/"
               />
-            </div>
+            </div> */}
           </div>
         </Layout>
       </main>

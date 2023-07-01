@@ -7,6 +7,8 @@ import Link from "next/link";
 import { LinkArrow } from "@/component/Icon";
 import HireMe from "@/component/HireMe";
 import lightBulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
+import yinYang from "../../public/images/svgs/yin-yang-solid.svg";
+
 import TransitionEffect from "@/component/TransitionEffect";
 
 export default function Home() {
