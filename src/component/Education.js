@@ -45,13 +45,13 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4  xs:ml-2">
           <Details
-            type="Bachelor Of Science In Computer Science"
-            place="Massachusetts Institute Of Technology (MIT)"
-            time="2016-2020 "
-            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Artificial Intelligence."
+            type="Associate degree in computer science (CS50)"
+            place="Edx (Harvard Online University)"
+            time="Early 2023"
+            info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Programming courses."
           />
           <Details
-            type="Bachelor Of Science In Computer Science"
+            type=" Associate degree in web design and development"
             place="Bafuto Institute Of Management And Informaton Techology."
             time="Early 2022"
             info="Relevant courses included HTML, CSS, JavaScript and other programming courses."
@@ -60,7 +60,7 @@ const Education = () => {
             type="High School Diploma"
             place="Kinsol College"
             time="2020"
-            info="Relevant courses included basic high school science coursesN."
+            info="Relevant courses included basic high school science courses."
           />
         </ul>
       </div>
