@@ -102,7 +102,7 @@ const about = () => {
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl  font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumber value={`1`} />+
+                  <AnimatedNumber value={`2`} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-ld sm:text-base xs:text-sm">
                   years of experience
