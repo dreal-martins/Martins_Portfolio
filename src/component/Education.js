@@ -45,19 +45,25 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4  xs:ml-2">
           <Details
-            type="Associate degree in computer science (CS50)"
+            type="Associate degree in Web and App Development."
+            place="Freecodecamp (Bootcamp)"
+            time="Mid 2023"
+            info="Relevant courses included ReactJs, React Native, NodeJs and ExpressJs"
+          />
+          <Details
+            type="Associate degree in computer science. (CS50)"
             place="Edx (Harvard Online University)"
             time="Early 2023"
             info="Relevant courses included Data Structures and Algorithms, Computer Systems Engineering, and Programming courses."
           />
           <Details
-            type=" Associate degree in web design and development"
+            type=" Associate degree in web design and development."
             place="Bafuto Institute Of Management And Informaton Techology."
             time="Early 2022"
             info="Relevant courses included HTML, CSS, JavaScript and other programming courses."
           />
           <Details
-            type="High School Diploma"
+            type="High School Diploma."
             place="Kinsol College"
             time="2020"
             info="Relevant courses included basic high school science courses."
