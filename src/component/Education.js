@@ -65,7 +65,7 @@ const Education = () => {
           <Details
             type="High School Diploma."
             place="Kinsol College"
-            time="2020"
+            time="2019"
             info="Relevant courses included basic high school science courses."
           />
         </ul>
