@@ -5,11 +5,11 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import project1 from "../../public/images/projects/crypto-screener-cover-image.jpg";
+import project1 from "../../public/images/projects/martins-store.png";
 import project2 from "../../public/images/projects/hulu-clone.png";
 import project3 from "../../public/images/projects/exercise.png";
 import project4 from "../../public/images/projects/tictactoe.png";
-import project5 from "../../public/images/projects/dreal-house.png";
+import project5 from "../../public/images/projects/Screenshot 2024-04-21 073358.png";
 import { motion } from "framer-motion";
 import TransitionEffect from "@/component/TransitionEffect";
 
@@ -127,7 +127,7 @@ const projects = () => {
         <Layout>
           <AnimatedText
             text="Imagination Trumps Knowledge!"
-            className="mb-9 lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            className="mb-9 lg:!text-5xl sm:mb-8 sm:!text-4xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
@@ -144,14 +144,38 @@ const projects = () => {
             <div className="col-span-12">
               <FeaturedProject
                 title="GOLDS-GYM"
-                summary="This is a web-based gym website built with ReactJS and styled with MU. Experience a user-friendly gym website built with ReactJS and styled with MUI. Achieve your fitness goals with our expert trainers, top-notch facilities, and personalized workout plans. Join us today and make fitness a lifestyle!."
+                summary="This is a web-based gym website built with ReactJS and styled with MUI. Experience a user-friendly gym website built with ReactJS and styled with MUI. Achieve your fitness goals with our expert trainers, top-notch facilities, and personalized workout plans. Join us today and make fitness a lifestyle!."
                 link="https://martinsgoldsgym.vercel.app/"
                 type="Project"
                 img={project3}
                 github="https://github.com/dreal-martins/golds_gym"
               />
             </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="MARTINS-STORE"
+                summary="This project is built with HTML, JavaScript, and styled with CSS. this website offer a good and responsive UI for an e-commerce clothing website, With its user-friendly design and reliable technology, it's a one-stop-shop for all your online shopping needs."
+                link="https://martinsstore.vercel.app/"
+                type="Project"
+                img={project1}
+                github="https://github.com/dreal-martins/MartinsStore"
+              />
+            </div>
+            <div className="col-span-12">
+              <FeaturedProject
+                title="DREAL-HOUSE"
+                summary="I built a real estate website using Next.js and Chakra UI in this project. The website offers a seamless user experience for all real estate needs. It showcases my ability to combine technology and design to create functional and visually appealing web solutions. Proud to present this project as an example of my skills."
+                link="https://drealhouse.netlify.app/"
+                type="Project"
+                img={project5}
+                github="https://github.com/dreal-martins/drealhouse"
+              />
+            </div>
           </div>
+          {/* <AnimatedText
+            text="Backend Projects"
+            className="my-9 lg:!text-5xl sm:mb-8 sm:!text-4xl xs:!text-4xl"
+          /> */}
         </Layout>
       </main>
     </>
