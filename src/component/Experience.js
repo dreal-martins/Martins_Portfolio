@@ -53,9 +53,32 @@ const Experience = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="Front-end developer"
+            position="Software Developer (Frontend Developer)"
+            company="Vegeel"
+            time="Summer 2024"
+            address="Lagos, NG"
+            work="As a Frontend Developer at Vegeel, a startup, I created a web application with ReactJS
+and additional libraries. By using Axios, I facilitated seamless data retrieval and
+synchronization between the frontend and backend. Working closely with the backend
+team, I optimized performance and ensured responsive design. This role significantly
+strengthened my React skills and expertise in frontend-backend integration."
+            companyLink=""
+          />
+          <Details
+            position="Software Developer (Front-end Developer)"
+            company="Qataloog"
+            time="Early 2024"
+            address="Lagos, NG"
+            work="I developed a comprehensive content e-library platform using TypeScript, Redux, and
+            Tailwind CSS for Qataloog, a service empowering African Universities and Colleges to
+            access academic resources. Leveraged strong research and negotiation skills to
+            secure books and journals from leading global publishers."
+            companyLink=""
+          />
+          <Details
+            position="Software Developer (Front-end Developer)"
             company="All Round Care (A.R.C)"
-            time="late 2022 - Present"
+            time="Late 2023"
             address="Lagos, NG"
             work="Worked on a team responsible for developing new features for A.R.C's
             e-commerce web-app, company landing page, including improving the accuracy and relevance of the admin dashboard and 
@@ -66,7 +89,7 @@ const Experience = () => {
           <Details
             position="Teaching Assistant"
             company="Bafuto institute of management and information technology"
-            time="Summer 2022"
+            time="Early 2024"
             address="Lagos, NG."
             work="Assisted in teaching a course on computer programming, held office hours to help students with assignments, 
             and assist the senior."

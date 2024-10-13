@@ -45,6 +45,12 @@ const Education = () => {
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4  xs:ml-2">
           <Details
+            type="Associate degree in Software Development."
+            place="ALX Nigeria"
+            time="Early 2024"
+            info="Relevant courses included Data Structures and Algorithms, Object-Oriented Programming (OOP), Software Engineering Principles and Operating Systems"
+          />
+          <Details
             type="Associate degree in Web and App Development."
             place="Freecodecamp (Bootcamp)"
             time="Mid 2023"

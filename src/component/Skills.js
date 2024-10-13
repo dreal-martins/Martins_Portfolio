@@ -23,22 +23,22 @@ const Skills = () => {
       </h2>
       <div className="w-full h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lg:h-[80vh] sm:h-[55vh] xs:h-[45vh] lg:bg-circularLightLg lg:dark:bg-circularDarkLg md:bg-circularLightMd md:dark:bg-circularDarkMd sm:bg-circularLightSm sm:dark:bg-circularDarkSm">
         <motion.div
-          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-8 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2"
+          className="flex items-center justify-center rounded-full font-semibold bg-dark text-light p-3 shadow-dark cursor-pointer dark:text-dark dark:bg-light lg:p-6 md:p-4 xs:text-xs xs:p-2"
           whileHover={{ scale: 1.05 }}
         >
-          Web & Mobile App
+          JavaScript (ES6+)
         </motion.div>
-        <Skill name="NodeJs" x="-25vw" y="2vw" />
-        <Skill name="ExpressJs" x="-5vw" y="-10vw" />
-        <Skill name="Javascript" x="20vw" y="6vw" />
-        <Skill name="ReactJS" x="0vw" y="12vw" />
-        <Skill name="NextJS" x="-20vw" y="-15vw" />
-        <Skill name="Redux" x="32vw" y="-5vw" />
-        <Skill name="React Native" x="15vw" y="-12vw" />
-        <Skill name="MongoDb" x="0vw" y="-20vw" />
-        <Skill name="Firebase" x="-25vw" y="18vw" />
-        <Skill name="Tailwind CSS" x="18vw" y="18vw" />
-        <Skill name="Context API" x="0vw" y="24vw" />
+        <Skill name="CI/CD" x="-25vw" y="2vw" />
+        <Skill name="ReactJS" x="-5vw" y="-10vw" />
+        <Skill name="Redux" x="20vw" y="6vw" />
+        <Skill name="Node.js/Express" x="0vw" y="12vw" />
+        <Skill name="RESTful APIs" x="-20vw" y="-15vw" />
+        <Skill name="GraphQL" x="32vw" y="-5vw" />
+        <Skill name="TypeScript" x="15vw" y="-12vw" />
+        <Skill name="Docker" x="0vw" y="-20vw" />
+        <Skill name="Cloud Platforms" x="-25vw" y="18vw" />
+        <Skill name="Authentication" x="18vw" y="18vw" />
+        <Skill name="Git" x="0vw" y="24vw" />
       </div>
     </>
   );

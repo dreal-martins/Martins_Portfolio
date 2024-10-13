@@ -54,7 +54,7 @@ const about = () => {
               <p className="font-medium">
                 {`Hi, I'm Martins, a web and mobile app developer with a
                  passion for creating beautiful, functional, and user-centered
-                 digital experiences. With almost 2 years of experience in the
+                 digital experiences. With almost 4 years of experience in the
                  field. I am always looking for new and innovative ways to bring
                  my client's visions to life.`}
               </p>
@@ -86,7 +86,7 @@ const about = () => {
             <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumber value={`23`} />+
+                  <AnimatedNumber value={`39`} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-ld sm:text-base xs:text-sm">
                   satisfied clients
@@ -94,7 +94,7 @@ const about = () => {
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumber value={`28`} />+
+                  <AnimatedNumber value={`48`} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-ld sm:text-base xs:text-sm">
                   Projects completed
@@ -102,7 +102,7 @@ const about = () => {
               </div>
               <div className="flex flex-col items-end justify-center xl:items-center">
                 <span className="inline-block text-7xl  font-bold md:text-6xl sm:text-5xl xs:text-4xl">
-                  <AnimatedNumber value={`2`} />+
+                  <AnimatedNumber value={`4`} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75 xl:text-center md:text-ld sm:text-base xs:text-sm">
                   years of experience
