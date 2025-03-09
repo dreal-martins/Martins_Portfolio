@@ -7,7 +7,7 @@ import React from "react";
 import project1 from "../../public/images/projects/martins-store.png";
 import project2 from "../../public/images/projects/hulu-clone.png";
 import project3 from "../../public/images/projects/exercise.png";
-import project4 from "../../public/images/projects/tictactoe.png";
+import project4 from "../../public/images/projects/vegeel.png";
 import project5 from "../../public/images/projects/Screenshot 2024-04-21 073358.png";
 import TransitionEffect from "@/component/TransitionEffect";
 import { FeaturedProject } from "@/component/FeaturedProject";
@@ -76,6 +76,16 @@ const projects = () => {
             className="mb-5 lg:!text-5xl sm:mb-4 sm:!text-4xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
+            <div className="col-span-12">
+              <FeaturedProject
+                title="Vegeel"
+                summary="Experience a high-performance website powered by Next.js and styled with Tailwind CSS. Enjoy fast page loads, seamless navigation, and visually stunning designs for an exceptional user experience across devices."
+                link="https://vegeel.com/"
+                type="Project"
+                img={project4}
+                // github="https://github.com/dreal-martins/hulu-clone"
+              />
+            </div>
             <div className="col-span-12">
               <FeaturedProject
                 title="Hulu Clone Project"

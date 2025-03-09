@@ -47,9 +47,14 @@ export const FeaturedProject = ({
           {summary}
         </p>
         <div className="mt-2 flex items-center">
-          <Link href={github} target="_blank" className="w-10">
-            <GithubIcon />
-          </Link>
+          {
+            github && (
+              <Link href={github} target="_blank" className="w-10">
+                <GithubIcon />
+              </Link>
+            )
+          }
+      
           <Link
             href={link}
             target="_blank"
