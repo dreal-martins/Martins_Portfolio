@@ -68,12 +68,6 @@ const Education = () => {
             time="Early 2022"
             info="Relevant courses included HTML, CSS, JavaScript and other programming courses."
           />
-          <Details
-            type="High School Diploma."
-            place="Kinsol College"
-            time="2019"
-            info="Relevant courses included basic high school science courses."
-          />
         </ul>
       </div>
     </div>
